@@ -36,7 +36,7 @@ while True:
     # Send sensor values only every UPDATE_INTERVAL seconds.
     now = time.monotonic()
     if now - last_time_sent >= UPDATE_INTERVAL:
-        uart.write(bytes(f"<p{bmp.3xx.pressure}>", "ascii"))
+        uart.write(bytes(f"<p{bmp3xx.pressure}>", "ascii"))
         uart.write(bytes(f"<t{hdc302x.temperature}>", "ascii"))
         uart.write(bytes(f"<h{hdc302x.relative_humidity}>", "ascii"))
         uart.write(bytes(f"<x{prox.proximity}>", "ascii"))
