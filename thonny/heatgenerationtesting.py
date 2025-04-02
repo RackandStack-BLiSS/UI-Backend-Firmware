@@ -50,4 +50,4 @@ while True:
     except Exception as e:
         seconds = int(time.time() - start_time)
         print(f"Error reading temperature: {e}")
-    time.sleep
+    time.sleep(1)
