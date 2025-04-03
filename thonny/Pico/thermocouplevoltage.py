@@ -48,7 +48,7 @@ while True:
     try:
         sensor_level = sensor.value
     # converts bit values to voltage with Vref = 3.3 V
-        volts = (sensor_level/65535)*(3.3)
+        volts = (sensor_level/4095)*(3.3)
     except Exception as e:
         volts = f"Error: {e}"
 
